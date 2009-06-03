@@ -153,10 +153,6 @@ module JSMin
           if @a == CHR_BACKSLASH
             @output << @a
             @a = get
-
-            if @a[0] <= ORD_LF
-              raise "JSMin parse error: unterminated string literal: #{@a}"
-            end
           end
         end
       end
